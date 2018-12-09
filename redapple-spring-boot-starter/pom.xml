@@ -19,7 +19,7 @@
     <version>2.1.1.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
-   <!-- <repositories>
+   <repositories>
         <repository>
             <id>io.spring.repo.maven.release</id>
             <url>http://repo.spring.io/release/</url>
@@ -38,24 +38,24 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <repository>
+        <!--<repository>
             <id>public</id>
             <name>Public Repositories</name>
             <url>http://192.168.1.153:9080/nexus/content/groups/public/</url>
-        </repository>
+        </repository>-->
     </repositories>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Snapshots</name>
-            <url>http://192.168.1.153:9080/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>releases</id>
-            <name>Releases</name>
-            <url>http://192.168.1.153:9080/nexus/content/repositories/releases/</url>
-        </repository>
-    </distributionManagement>-->
+  <!-- <distributionManagement>
+      <snapshotRepository>
+          <id>snapshots</id>
+          <name>Snapshots</name>
+          <url>http://192.168.1.153:9080/nexus/content/repositories/snapshots/</url>
+      </snapshotRepository>
+      <repository>
+          <id>releases</id>
+          <name>Releases</name>
+          <url>http://192.168.1.153:9080/nexus/content/repositories/releases/</url>
+      </repository>
+  </distributionManagement>-->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -94,7 +94,24 @@
           <groupId>org.springframework.cloud</groupId>
           <artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
       </dependency>-->
-
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-data-jpa</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-jdbc</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <scope>runtime</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <optional>true</optional>
+      </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
