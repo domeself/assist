@@ -1,4 +1,4 @@
-package com.redapplenet.cloud.utils;
+package com.redapplenet.cloud.utils.web.response;
 
 import java.util.HashMap;
 import java.util.Map;
